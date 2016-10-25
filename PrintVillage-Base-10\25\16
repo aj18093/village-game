@@ -1,0 +1,175 @@
+package VillageGamePack;
+
+public class PrintVillage {
+	static boolean wallUpgr = false;
+	static boolean house1 = true;
+	static boolean house2 = true;
+	static boolean house3 = true;
+	static boolean house4 = true;
+	public static void main( String[] args ){
+		
+		System.out.println("printvillage()");
+		printvillage();
+		System.out.println("");
+		System.out.println("printVillageADVANCED no houses destroyed");
+		printVillageADVANCED();
+		System.out.println("");
+		System.out.println("printVillageADVANCED House 1 destroyed");
+		//wallUpgr = false;
+		house1 = false;
+		System.out.println(" ");
+		printVillageADVANCED();
+		System.out.println("");
+		/*//Testing stuff
+		System.out.println("printVillageADVANCED House 1 and 2 destroyed");
+		house1 = false;
+		house2 = false;
+		printVillageADVANCED();
+		System.out.println("");
+		System.out.println("printVillageADVANCED House 1 2 and 3 destroyed");
+		house1 = false;
+		house2 = false;
+		house3 = false;
+		printVillageADVANCED();
+		System.out.println("");
+		System.out.println("printVillageADVANCED House 1 2 3 and 4 destroyed");
+		house1 = false;
+		house2 = false;
+		house3 = false;
+		house4 = false;
+		printVillageADVANCED();
+		System.out.println("");
+		System.out.println("printVillageADVANCED House 1 and 4 destroyed");
+		house1 = false;
+		house2 = true;
+		house3 = true;
+		house4 = false;
+		printVillageADVANCED();
+		System.out.println("");
+		*/
+	}
+	
+	
+
+	protected static void printvillage() {
+		System.out.println(" xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ");
+		System.out.println(" x   __                __                                mine           x ");
+		System.out.println(" x   ||_________       ||_________       well            ____           x ");
+		System.out.println(" x   |          |      |          |       ___           /    \\          x ");
+		System.out.println(" x   |  1   __  |      |  2   __  |       |_|          /  __   \\        x ");
+		System.out.println(" x   |______II__|      |______II__|       (0)         /  I00I   \\       x ");
+		System.out.println(" x                                                                      x ");
+		System.out.println(" x                         __                __    storehouse / --- \\   x ");
+		System.out.println(" x                         ||_________       ||_________      |  8  |   x ");
+		System.out.println(" x                         |          |      |          |     |  8  |   x ");
+		System.out.println(" x           _________     |  3   __  |      |  4   __  |     |  8  |   x ");
+		System.out.println(" x           I   l   I     |______II__|      |______II__|     |  8  |   x ");
+		System.out.println(" xxxxxxxxxxxxx   l   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ");
+		
+		
+	}
+	protected static void printVillageADVANCED() {
+		printWallUpper();
+		printVillageR1();
+		System.out.println(" x                                                                       x ");
+		printVillageR2();
+		printWallLower();
+		
+		
+	}
+	private static void printVillageR1() {
+		if (house1 == true){
+			if (house2 == true){
+				System.out.println(" x   __                __                                mine            x ");
+				System.out.println(" x   ||_________       ||_________       well            ____            x ");
+				System.out.println(" x   |          |      |          |       ___           /    \\           x ");
+				System.out.println(" x   |  1   __  |      |  2   __  |       |_|          /  __   \\         x ");
+				System.out.println(" x   |______II__|      |______II__|       (0)         /  I00I   \\        x ");
+			} else if (house2 == false){
+				System.out.println(" x   __                __                                mine            x ");
+				System.out.println(" x   ||_________       ||_      __       well            ____            x ");
+				System.out.println(" x   |          |      |  \\____/   |       ___           /    \\           x ");
+				System.out.println(" x   |  1   __  |      | |X|  __  |       |_|          /  __   \\         x ");
+				System.out.println(" x   |______II__|      |______XX__|       (0)         /  I00I   \\        x ");
+			}
+		} else if ((house1 == false)&&(house2 == true)){
+			System.out.println(" x   __                __                                mine            x ");
+			System.out.println(" x   ||_      __       ||_________       well            ____            x ");
+			System.out.println(" x   |  \\____/  |      |          |       ___           /    \\           x ");
+			System.out.println(" x   | |X|  __  |      |  2   __  |       |_|          /  __   \\         x ");
+			System.out.println(" x   |______XX__|      |______II__|       (0)         /  I00I   \\        x ");
+		} else {
+			System.out.println(" x   __                __                                mine            x ");
+			System.out.println(" x   ||_      __       ||_      __       well            ____            x ");
+			System.out.println(" x   |  \\____/  |      |  \\____/  |       ___           /    \\           x ");
+			System.out.println(" x   | |X|  __  |      | |X|  __  |       |_|          /  __   \\         x ");
+			System.out.println(" x   |______XX__|      |______XX__|       (0)         /  I00I   \\        x ");
+		}
+		
+	}
+	private static void printVillageR2(){
+		if (house3 == true){
+			if (house4 == true){
+				System.out.println(" x                         __                __    storehouse / --- \\    x ");
+				System.out.println(" x                         ||_________       ||_________      |  8  |    x ");
+				System.out.println(" x                         |          |      |          |     |  8  |    x ");
+				System.out.println(" x           _________     |  3   __  |      |  4   __  |     |  8  |    x ");
+				System.out.println(" x           I   l   I     |______II__|      |______II__|     |  8  |    x ");
+			} else if (house4 == false){
+				System.out.println(" x                         __                __    storehouse / --- \\    x ");
+				System.out.println(" x                         ||_________       ||_      __      |  8  |    x ");
+				System.out.println(" x                         |          |      |  \\____/  |     |  8  |    x ");
+				System.out.println(" x           _________     |  3   __  |      | |X|  __  |     |  8  |    x ");
+				System.out.println(" x           I   l   I     |______II__|      |______XX__|     |  8  |    x ");
+			}
+		} else if ((house3 == false)&&(house4 == true)){
+			System.out.println(" x                         __                __    storehouse / --- \\    x ");
+			System.out.println(" x                         ||_      __       ||_________      |  8  |    x ");
+			System.out.println(" x                         |  \\____/  |      |          |     |  8  |    x ");
+			System.out.println(" x           _________     | |X|  __  |      |  4   __  |     |  8  |    x ");
+			System.out.println(" x           I   l   I     |______XX__|      |______II__|     |  8  |    x ");
+		} else {
+			System.out.println(" x                         __                __    storehouse / --- \\    x ");
+			System.out.println(" x                         ||_      __       ||_      __      |  8  |    x ");
+			System.out.println(" x                         |  \\____/  |      |  \\____/  |     |  8  |    x ");
+			System.out.println(" x           _________     | |X|  __  |      | |X|  __  |     |  8  |    x ");
+			System.out.println(" x           I   l   I     |______XX__|      |______XX__|     |  8  |    x ");
+		}
+	}
+	private static void printWallUpper() {
+		if (wallUpgr == false){
+			System.out.println(" xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ");
+		} else {
+			System.out.println(" XxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxX ");
+		}
+		
+	}
+	private static void printWallLower(){
+		if (wallUpgr == false){
+			System.out.println(" xxxxxxxxxxxxx   l   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ");
+		} else {
+			System.out.println(" XxXxXxXxXxXxX   l   XxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxX ");
+		}
+	}
+
+}
+//showVillage();
+
+//Start
+/*System.out.println("Welcome to the village!");
+
+System.out.println(" xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ");
+System.out.println(" x   __                __                                mine          x ");
+System.out.println(" x   ||_________       ||_________       well            ____          x ");
+System.out.println(" x   |          |      |          |       ___           /    \\         x ");
+System.out.println(" x   |  1   __  |      |  2   __  |       |_|          /  __   \\       x ");
+System.out.println(" x   |______II__|      |______II__|       (_)         /  I00I   \\      x ");
+System.out.println(" x                                                                     x ");
+System.out.println(" x                         __                __    storehouse / -- \\   x ");
+System.out.println(" x                         ||_________       ||_________      |    |   x ");
+System.out.println(" x                         |          |      |          |     |    |   x ");
+System.out.println(" x           _________     |  3   __  |      |  4   __  |     |    |   x ");
+System.out.println(" x           I   l   I     |______II__|      |______II__|     |    |    x ");
+System.out.println(" xxxxxxxxxxxxx   l   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ");
+System.out.println("The village is under attack from orcs. You have two villagers to command.");
+ */
